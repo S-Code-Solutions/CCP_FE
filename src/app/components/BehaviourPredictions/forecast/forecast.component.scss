@@ -1,0 +1,49 @@
+/* forecast.component.scss */
+
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .loading {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .forecast-data {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .forecast-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .confidence-interval {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

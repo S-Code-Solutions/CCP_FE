@@ -1,0 +1,19 @@
+<div class="recommendations-container">
+    <h2>Recommended Products for You</h2>
+    <div *ngIf="recommendations.length > 0; else noRecommendations">
+        <div class="product-card" *ngFor="let product of recommendations">
+            <img *ngIf="product.imageUrl" [src]="product.imageUrl" alt="Product Image">
+            <div class="product-info">
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.description }}</p>
+                <div *ngIf="product.price" class="product-price">
+                    Price: ${{ product.price }}
+                </div>
+                <!-- Add more product details here -->
+            </div>
+        </div>
+    </div>
+    <ng-template #noRecommendations>
+        <p>No recommendations available at the moment. Please check back later!</p>
+    </ng-template>
+</div>
