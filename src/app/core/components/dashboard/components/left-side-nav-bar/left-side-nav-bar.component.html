@@ -1,0 +1,27 @@
+<mat-sidenav-container #sidenavContainer class="shadow-none" style="height: 91.5%;">
+    <mat-sidenav [opened]="navState" class="bg-skin-secondary shadow-2xl" mode="side">
+      <mat-nav-list >
+  
+        <mat-list-item [routerLink]="'./homepage'" role="listitem" routerLinkActive="buttonActive">
+          <fa-icon [icon]="faHome" class="side-btn-icon "></fa-icon>&nbsp;Home
+        </mat-list-item>
+        <mat-list-item [routerLink]="'./timebase'" role="listitem" routerLinkActive="buttonActive">
+          <fa-icon [icon]="faLeaf" class="side-btn-icon "></fa-icon>&nbsp;Time-Based Product Recommendation
+        </mat-list-item>
+        <mat-list-item [routerLink]="'./behaviour'" role="listitem" routerLinkActive="buttonActive">
+          <fa-icon [icon]="faCogs" class="side-btn-icon "></fa-icon>&nbsp;Customer Behavior Prediction
+        </mat-list-item>
+        <mat-list-item [routerLink]="'./personal'" role="listitem" routerLinkActive="buttonActive">
+          <fa-icon [icon]="faCloudSun" class="side-btn-icon "></fa-icon>&nbsp;Personalized Product Suggestions
+        </mat-list-item>
+  
+      </mat-nav-list>
+  
+  
+    </mat-sidenav>
+    <mat-sidenav-content [@routeAnimations]="getRouteAnimationData(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>
+  

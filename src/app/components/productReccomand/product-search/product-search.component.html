@@ -1,0 +1,24 @@
+<div class="search-container">
+    <h2>Search Products</h2>
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Enter product name or category" (keyup)="onSearch()" />
+    <button (click)="onSearch()">Search</button>
+    
+    <div *ngIf="searchResults && searchResults.length > 0">
+      <h3>Search Results</h3>
+      <div class="product-list">
+        <div *ngFor="let product of searchResults" class="product-item">
+          <img [src]="product.imageUrl" alt="Product Image">
+          <div class="product-info">
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.description }}</p>
+            <span class="price">Price: {{ product.price | currency }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="searchResults && searchResults.length == 0">
+      <p>No products found matching your search criteria.</p>
+    </div>
+  </div>
+  

@@ -6,7 +6,7 @@ export const environment = {
     production: false,
     // Assuming your backend API is running locally for development
     // Update the URL to point to your actual backend API
-    apiBaseUrl: 'http://localhost:8000/api'
+    apiBaseUrl: 'http://localhost:5000/api/'
   };
   
   /*
