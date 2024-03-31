@@ -14,14 +14,14 @@
   width: 75px;
   height: 75px !important;
   border-radius: 55px;
-  background: #EECE38;
+  background: #0E94D7;
   position: relative;
   top: -30px;
 border:5px solid white;
 }
 
 .btn{
-  background: #1C8727;
+  background: #085AA9;
   /* font-weight: bold; */
   color: white;
   //width: 161px;
@@ -52,7 +52,7 @@ border:5px solid white;
       .block {
         width: 0%;
         height: inherit;
-        background: #209F2E;
+        background: #0E94D7;
         position: absolute;
         animation: mainBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
         display: flex;
@@ -60,7 +60,7 @@ border:5px solid white;
 
       h4 {
         font-family: 'Poppins';
-        color: #209F2E;
+        color: #0E94D7;
         font-size: 42px;
         -webkit-animation: mainFadeIn 1s forwards;
         -o-animation: mainFadeIn 1s forwards;
@@ -72,7 +72,7 @@ border:5px solid white;
         position: relative;
 
         mat-icon{
-          color: #209F2E;
+          color: #0E94D7;
           font-size: 42px;
           position: relative;
           top: 6px;
@@ -86,7 +86,7 @@ border:5px solid white;
           -moz-border-radius: 50%;
           border-radius: 50%;
 
-          background: #209F2E;
+          background: #0E94D7;
           -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
           animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
           animation-delay: 1s;
@@ -124,7 +124,7 @@ border:5px solid white;
         opacity: 0;
         font-weight: 400;
         font-family: 'Lato';
-        color: #209F2E;
+        color: #0E94D7;
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 5px;
