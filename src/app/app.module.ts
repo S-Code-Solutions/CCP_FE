@@ -47,6 +47,7 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { NgxMaterialTimepickerDirective } from './core/directives/ngx-material-timepicker.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { TimeResultComponent } from './components2/components/time-base/time-result/time-result.component';
+import { CBResultsComponent } from './components2/components/customer-behaviour/c-bresults/c-bresults.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +68,7 @@ import { TimeResultComponent } from './components2/components/time-base/time-res
     UserProfileComponent,
     NgxMaterialTimepickerDirective,
     TimeResultComponent,
+    CBResultsComponent,
   ],
   imports: [
     BrowserModule,

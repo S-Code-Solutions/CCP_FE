@@ -30,21 +30,6 @@ export class TimeBaseComponent implements OnInit {
         Validators.required,
       ])
     });
-    // this.cookieValues = JSON.parse(this.cookieService.get('Cli'));
-    // this.soilValues = JSON.parse(this.cookieService.get('Soil'));
-    // console.log("=================== cookieValues ==============================")
-    // console.log(this.cookieValues)
-    // console.log(this.soilValues)
-    // console.log("=================== soilValues ==============================")
-    // this.CRForm.setValue({
-    //   N:JSON.stringify(this.soilValues.properties.layers[0].depths[0].values['Q0.5']),
-    //   P:JSON.stringify(this.soilValues.properties.layers[1].depths[0].values['Q0.5']),
-    //   K :JSON.stringify(this.cookieValues.current.humidity),
-    //   temperature:JSON.stringify(this.cookieValues.current.temp_c),
-    //   humidity:JSON.stringify(this.cookieValues.current.humidity),
-    //   ph:JSON.stringify(this.soilValues.properties.layers[1].depths[0].values['Q0.5']),
-    //   rainfall:JSON.stringify(this.cookieValues.current.precip_mm),
-    // })
 
   }
 

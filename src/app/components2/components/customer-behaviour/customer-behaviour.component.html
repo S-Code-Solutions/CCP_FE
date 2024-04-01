@@ -1,1 +1,22 @@
-<p>customer-behaviour works!</p>
+<h3 class="text-center head1 mt-5 mb-4">Predict Here</h3>
+<section class="text-center mt-3 mb-5">
+  <form  [formGroup]="CRForm">
+    <div class="d-flex justify-content-center">
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Customer Id</mat-label>
+        <mat-select [formControl]="customerControl" required>
+            <mat-option>--</mat-option>
+            <mat-option *ngFor="let customer of customers" [value]="customer">
+            {{customer.name}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="customerControl.hasError('required')">Please choose an Customer</mat-error>
+        <mat-hint>{{customerControl.value?.id}}</mat-hint>
+    </mat-form-field>      
+    </div>
+    <div class="text-center mt-4 mb-2">
+      <button mat-raised-button class="submitbtn1" (click)="predictCrops()">Predict</button>
+    </div>
+  </form>
+</section>
