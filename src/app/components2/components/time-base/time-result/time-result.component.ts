@@ -18,6 +18,8 @@ export class TimeResultComponent implements OnInit {
   ) {}
 
   date: any;
+  date2: any;
+  date3: any;
   product1: any;
   product2: any;
   product3: any;
@@ -28,6 +30,8 @@ export class TimeResultComponent implements OnInit {
     console.log(this.data.arima_predictions[0].recommended_products);
     console.log('====================================');
     this.date = this.data.arima_predictions[0].date
+    this.date2 = this.data.arima_predictions[1].date
+    this.date3 = this.data.arima_predictions[2].date
     this.product1 = this.data.arima_predictions[0].recommended_products[0]
     this.product2 = this.data.arima_predictions[0].recommended_products[1]
     this.product3 = this.data.arima_predictions[0].recommended_products[2]

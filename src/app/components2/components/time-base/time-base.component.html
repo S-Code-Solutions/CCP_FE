@@ -12,11 +12,7 @@
         </mat-form-field>      
       </div>
       <div class="ms-4">
-        <!-- <mat-label>Choose A Time</mat-label>
-        <div style="margin-left: 26px;">
-          <ngx-mat-timepicker  formControlName="time"></ngx-mat-timepicker>
-        </div> -->
-        <material-timepicker color="primary" appearance="outline" format="24" [userTime]="exportTime"></material-timepicker>        
+        <material-timepicker (change)="onChangeHour($event)" formControlName="time" color="primary" appearance="outline" format="24" [userTime]="exportTime"></material-timepicker>        
         
       </div>
     </div>

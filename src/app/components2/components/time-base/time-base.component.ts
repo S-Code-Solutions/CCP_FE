@@ -24,6 +24,8 @@ export class TimeBaseComponent implements OnInit {
   exportTime: MaterialTimePickerComponent | any;
   formControl!: FormControl<any>;
   userTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+  selectedTime:any;
+  newdate:any;
 
   constructor(
     private timeBaseService: TimeBaseService,
@@ -40,17 +42,17 @@ export class TimeBaseComponent implements OnInit {
     });
   }
 
+  onChangeHour(event:any) {
+    this.selectedTime = event;
+  }
+
   predictCrops() {
     const selectedDate: Date = this.CRForm.get('date')?.value;
-    const selectedTime: Date = this.CRForm.get('time')?.value;
-    console.log('====================================');
-    console.log(selectedTime);
-    console.log('====================================');
-    const formattedDateTime = this.formatDateWithCurrentTime(selectedDate);
+    const formattedDate: any = this.datePipe.transform(selectedDate, 'yyyy-MM-dd');
+    this.newdate = formattedDate+'T'+this.selectedTime.hour+':'+this.selectedTime.minute+':'+'00';
     this.timeBaseService
-      .getProductData(formattedDateTime)
+      .getProductData(this.newdate)
       .subscribe((res: any) => {
-        // console.log(res)
         this.dialogRef.close();
         this.openDialog3(res);
       });
