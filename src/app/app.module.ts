@@ -21,20 +21,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatBadgeModule } from '@angular/material/badge';
 import { LeftSideNavBarComponent } from './core/components/dashboard/components/left-side-nav-bar/left-side-nav-bar.component';
 import { TopBarComponent } from './core/components/dashboard/components/top-bar/top-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -42,12 +37,19 @@ import { DashboardComponent } from './core/components/dashboard/dashboard.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientComponent } from './core/components/dashboard/components/top-bar/components/client/client.component';
 import { UserProfileComponent } from './core/components/dashboard/components/top-bar/components/user-profile/user-profile.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { NgxMaterialTimepickerDirective } from './core/directives/ngx-material-timepicker.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { TimeResultComponent } from './components2/components/time-base/time-result/time-result.component';
 import { CBResultsComponent } from './components2/components/customer-behaviour/c-bresults/c-bresults.component';
+// import {
+//   NgxMatDatetimePickerModule,
+//   NgxMatNativeDateModule,
+//   NgxMatTimepickerModule,
+// } from '@angular-material-components/datetime-picker';
+import { MaterialTimePickerModule } from '@candidosales/material-time-picker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,24 +84,31 @@ import { CBResultsComponent } from './components2/components/customer-behaviour/
     MatButtonModule,
     MatToolbarModule,
     MatDialogModule,
-    MatTableModule,
+    // MatTableModule,
     MatInputModule,
     MatAutocompleteModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSortModule,
+    // MatSortModule,
     MatPaginatorModule,
-    MatTabsModule,
+    // MatTabsModule,
     MatCardModule,
     MatCheckboxModule,
-    MatSnackBarModule,
+    // MatSnackBarModule,
     MatSelectModule,
     MatProgressBarModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-        MatFormFieldModule,
-        NgxMaterialTimepickerModule,
-        HttpClientModule
+    MatFormFieldModule,
+    // NgxMaterialTimepickerModule,
+    HttpClientModule,
+    // NgxMatDatetimePickerModule,
+    // NgxMatTimepickerModule,
+    // NgxMatNativeDateModule,
+    // NgxMatMomentModule,
+    FormsModule,
+    MaterialTimePickerModule,
+    MatCardModule,
   ],
   providers: [
     RecommendationService, // Provide the RecommendationService to be used across the application
